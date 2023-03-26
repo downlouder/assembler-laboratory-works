@@ -4,11 +4,12 @@
 ;(x varies from 3 in 5.5 steps).
 
 .686
-.model flat, stdcall
-option casemap :none
-include \masm32\include\windows.inc
-include \masm32\macros\macros.asm
-uselib kernel32,user32,fpu,masm32
+.model flat, stdcall ; Use flat memory model with stdcall calling convention
+option casemap:none ; Set case sensitivity for symbols to none
+include C:\masm32\include\windows.inc ; Include Windows API declarations
+include C:\masm32\include\kernel32.inc
+include C:\masm32\include\user32.inc 
+include C:\masm32\include\fpu.inc ; Include FPU instructions and declarations
 includelib C:\masm32\lib\kernel32.lib ; Include kernel32 library
 includelib C:\masm32\lib\user32.lib 
 includelib C:\masm32\lib\fpu.lib ; Include FPU library
